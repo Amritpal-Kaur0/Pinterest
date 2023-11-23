@@ -6,6 +6,9 @@ const postSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
  },
+ image:{
+    type: String,
+ },
   postText: {
     type: String,
     required: true,
