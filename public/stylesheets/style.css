@@ -34,9 +34,9 @@ body {
 .header {
   font-size: 32px;
   font-weight: 700;
-  margin-top: 40px;
-  margin-bottom: 10px;
+ margin-top: 20px;
  line-height: 0.8;
+ margin-bottom:10px;
 }
 .detail {
   width: 100%;
@@ -147,4 +147,11 @@ hr {
   text-decoration: none;
   background-color: rgb(241, 236, 236);
   border-radius: 20px;
+}
+.error{
+  font-weight: 500;
+  color:red;
+  padding: 10px 0px;;
+  text-transform: capitalize;
+  
 }
