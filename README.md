@@ -32,7 +32,8 @@ Pinterest  is a full-stack web application that replicates the core features of 
    - Stay tuned for the exciting addition of profile picture upload functionality!
 
 ## Preview
- [Video](./video.webm)
+[Untitled_ Nov 21, 2023 7_13 PM.webm](https://github.com/Amritpal-Kaur0/Pinterest/assets/128442182/caea5913-4ad9-473c-9082-e99f3f5b38e2)
+
 
 ## Getting Started
 
