@@ -13,60 +13,46 @@
           <div class="profile-picture">
             <img src="https://orionstardesign.com/wp-content/uploads/2023/08/010.jpg" alt="Profile Picture">
           </div>
-          <h2 class="name">Username</h2>
-          <h3 class="username">@username</h3>
-          <p class="tagline">Some Tagline</p>
-          <p class="description">Some description</p>
-          <a href="#" class="button"> Account Settings</a>
+          <h2 class="name"><%=user.fullname%></h2>
+          <h3 class="username">@<%=user.username%></h3>
+          <p class="tagline">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, harum?</p>
+          <a href="/logout" class="button"> Logout</a>
+          <!-- upload form -->
+          <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="caption">New Post</label>
+            <br>
+            <input type="text" name="caption" id="caption" placeholder="Caption Here !">
+            <input type="file" name="file" id="file">
+<button class="uploadbtn" type="submit">Upload</button>
+          </form>
         </div>
     </div>
 
     <div class="wrapper">
         <div class="container">
           <div class="inner-wrapper">
-            <div class="card">
-              <div class="inner-card">
-                <div class="img-wrapper">
-                  <img src="https://source.unsplash.com/collection/190727/900x600" alt="">
+            <div class="cards flex ">
+              <% user.posts.forEach(function(post){%>
+                <div class="card ">
+                <div class="inner-card">
+                  <div class="img-wrapper">
+                    <img src= "/images/uploads/<%=post.image%>"  alt="my posts">
+                  </div>
+                  <div class="content">
+                    <h1><%=post.postText %></h1>
+              
+                  </div>
+                  <div class="btn-wrapper">
+                    <button class="view-btn" data-src="/images/uploads/<%=post.image%>">View</button>
+                  </div>
+                  </div>
                 </div>
-                <div class="content">
-                  <h1>Card Title</h1>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolore!</p>
-                </div>
-                <div class="btn-wrapper">
-                  <button class="view-btn" data-src="https://source.unsplash.com/collection/190727/900x600">View</button>
-                </div>
-              </div>
+              <%})%>
+      
+            
             </div>
-            <div class="card">
-              <div class="inner-card">
-                <div class="img-wrapper">
-                  <img src="https://source.unsplash.com/collection/190727/901x601" alt="">
-                </div>
-                <div class="content">
-                  <h1>Card Title</h1>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolore!</p>
-                </div>
-                <div class="btn-wrapper">
-                  <button class="view-btn" data-src="https://source.unsplash.com/collection/190727/901x601">View</button>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="inner-card">
-                <div class="img-wrapper">
-                  <img src="https://source.unsplash.com/collection/190727/903x603" alt="">
-                </div>
-                <div class="content">
-                  <h1>Card Title</h1>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt, dolore!</p>
-                </div>
-                <div class="btn-wrapper">
-                  <button class="view-btn" data-src="https://source.unsplash.com/collection/190727/903x603">View</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
         </div>
       </div>
     
@@ -78,7 +64,7 @@
           </div>
         </div>
       </div>
-    <p class="credit">Image Credit <a href="http://source.unsplash.com">unsplash</a> </p>
+   
 
     <script src="/javascripts/profile.js"></script>
 
